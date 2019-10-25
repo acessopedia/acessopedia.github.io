@@ -1,0 +1,30 @@
+# config.yml
+
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: 'images/uploads'
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'pages/'
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Tag", name: "body", widget: "markdown"}
+      - {label: "Data da última atualização", name: "date", widget: "datetime"}
+      - {label: "Rascunho?", name: "draft", widget: "boolean", default: true}
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
+  - label: "Blog"
+  name: "blog"
+  folder: "_posts/blog"
+  create: true
+  identifier_field: name
+  fields:
+    - {label: "Nome", name: "name", widget: "string"}
+    - {label: "Data de publicação", name: "date", widget: "datetime"}
+    - {label: "Data da última atualização", name: "date", widget: "datetime"}
+    - {label: "Imagem", name: "thumbnail", widget: "image"}
+    - {label: "Conteúdo", name: "body", widget: "markdown"}
+publish_mode: editorial_workflow
