@@ -16,9 +16,9 @@ collections:
       - {label: "Data da última atualização", name: "date", widget: "datetime"}
       - {label: "Rascunho?", name: "draft", widget: "boolean", default: true}
       - {label: "Conteúdo", name: "body", widget: "markdown"}
-  - label: "Blog"
-  name: "blog"
-  folder: "_posts/blog"
+  - name: "blog"
+  label: "Blog"
+  folder: "_posts/"
   create: true
   identifier_field: name
   fields:
